@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Virtual System Controller</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "{{url_for('static',filename='font/fonts.css')}}">
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "{{url_for('static',filename='css/normalize.css')}}">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "{{url_for('static',filename='css/utility.css')}}">
+        <link rel = "stylesheet" href = "{{url_for('static',filename='css/style.css')}}">
+        <link rel = "stylesheet" href = "{{url_for('static',filename='css/responsive.css')}}">
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "{{url_for('index')}}" class = "site-brand">
+                    Virtual <span>System Controller</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "{{url_for('index')}}" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{{url_for('Explore')}}" class = "nav-link">Explore</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{{ url_for('Action_Page') }}" class = "nav-link">Action</a>
+                        </li>
+                       
+                        <li class = "nav-item">
+                            <a href = "{{url_for('about')}}" class = "nav-link">About</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "{{url_for('contact')}}" class = "nav-link">Contact</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class = "flex">
+            <div class = "container">
+                <div class = "header-title">
+                    <h1>Welcome to Virtual Gesture World</h1>
+                    <p>Small Gestures Have Big Impact</p>
+                </div>
+                <!-- <div class = "header-form">
+                    <h2>Choose your Travel location:</h2>
+                    <form class = "flex">
+                        <input type = "text" class = "form-control" placeholder="Destination name">
+                        <input type="date" class = "form-control" placeholder="Date">
+                        <input type="number" class = "form-control" placeholder="Price ($)">
+                        <input type="submit" class = "btn" value = "Search">
+                    </form>
+                </div> -->
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- featured section -->
+        <section id = "featured" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">Control Some of your System Space using Hands</span>
+                    <h2 class = "lg-title">Some Spaces :</h2>
+                </div>
+
+                <div class = "featured-row">
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "{{url_for('static',filename = 'images/volume.jpg')}}" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                            <i class = "fa fa-volume-up"></i>
+                            Virtual Volume
+                            </span>
+                            <div>
+                                <p class = "text">It is a Controller Which Increase and decrease volume on basis of thumb and index finger Distance,on the basis of distance volume is calculated.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "{{url_for('static',filename = 'images/cursor.jpg')}}" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                            <i class = "fas fa-mouse-pointer"></i>
+                            Virtual Mouse
+                            </span>
+                            <div>
+                                <p class = "text">It is a Controller Which Controls the Cursor of your device using thumb and index finger by joining them you can move the cursor and for clicking middle & index should be tapped</p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "{{url_for('static',filename = 'images/keyboard.jpg')}}" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                            <i class = "fas fa-keyboard"></i>
+                            Virtual Keyboard
+                            </span>
+                            <div>
+                                <p class = "text">It is a controller which Contols the keyboard of your device using your index and middle(By tapping Word is written on your writting S/W)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src ="{{url_for('static',filename = 'images/coming.png')}}"  alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-stopwatch"></i>
+                                More  Coming Soon
+                            </span>
+                            
+                            <div>
+                            <p class = "text">We Are coming with some more Contollers Soon......................................................................................................................................................................................................................... </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of featured section -->
+
+        <!-- services section -->
+        <section id = "services" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">know about services that we offer</span>
+                    <h2 class = "lg-title">Our services</h2>
+                </div>
+
+                <div class = "services-row">
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fa fa-volume-up"></i>
+                        </span>
+                        <h3>Controling Volume Using fingers</h3>
+                        <p class = "text">Index and thumb fingers Distance set the volume</p>
+                        <!-- <a href = "#" class = "btn">Read more</a> -->
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-mouse-pointer"></i>
+                        </span>
+                        <h3>Controlling Cursor Using fingers</h3>
+                        <p class = "text">Index and thumb moves the cursor and index and middle performs the tap task</p>
+                        <!-- <a href = "#" class = "btn">Read more</a> -->
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-keyboard"></i>
+                        </span>
+                        <h3>Contolling Keypad Using fingers</h3>
+                        <p class = "text">index and middle is used to type word virtually</p>
+                        <!-- <a href = "#" class = "btn">Read more</a> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+        <!-- testimonials section -->
+        <section id = "testimonials" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">Feedbacks from Our Cleints</span>
+                    <h2 class = "lg-title">Testimonials</h2>
+                </div>
+
+                <div class = "test-row">
+                    <div class = "test-item">
+                        <!-- this predictor helps me a lot ! I am from bihar live in delhi but when i get job letter from cisco , i want to move on banglore ,this helps me to get the prices of houses without wasting time on searching and long day with dealers today i am live in banglore this predictor helps me achieve my dream house in budget . -->
+                        <p class = "text">हम एह साइट के यूजर हईं ई हमरा मदद करेला जब हमार इंक्रीमेंट वॉल्यूम में गलती हो जाला तब हम एक दिन खातिर एह साइट के इस्तेमाल कइनी</p>
+                        <div class = "test-item-info">
+                            <img src = "{{url_for('static',filename = 'images/test-1.jpg')}}" alt = "testimonial">
+                            <div>
+                                <h3>Ashish Kumar</h3>
+                                <p class = "text">User of volume controller</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "test-item">
+                        <p class = "text">I am Monu ! Live in Delhi and my mouse is not working because of some faults in wire then i get to know about this site and do small task using this site cursor , it's difficult to move but good for emergency circumstances   </p>
+                        <div class = "test-item-info">
+                            <img src = "{{url_for('static',filename = 'images/test-2.jpg')}}" alt = "testimonial">
+                            <div>
+                                <h3>Monu Singh</h3>
+                                <p class = "text">User of Cursor Controller</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "test-item">
+                        <p class = "text">I am traveller and carry my laptops and technical stuff with me as you can see in my photo i am in starbucks ,where waiter mistakenly drop the coffee in my keyboard but by using this site i do my emergency task on time</p>
+                        <div class = "test-item-info">
+                            <img src = "{{url_for('static',filename = 'images/test-3.jpg')}}" alt = "testimonial">
+                            <div>
+                                <h3>Vaibhav Kaushik</h3>
+                                <p class = "text">User of Keyboard Controller</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of testimonials section -->
+
+        <!-- video section -->
+        <section id = "video">
+            <div class = "video-wrapper flex">
+                <video loop>
+                    <source src = "{{url_for('static',filename = 'videos/video-section.mp4')}}" type = "video/mp4">
+                </video>
+                <button type = "button" id = "play-btn">
+                    <i class = "fas fa-play"></i>
+                </button>
+            </div>
+        </section>
+        <!-- end of video section -->
+
+        <!-- footer -->
+        <footer class = "py-4">
+            <div class = "container footer-row">
+                <div class = "footer-item">
+                    <a href = "index.html" class = "site-brand">
+                        Virtual<span>System Controller</span>
+                    </a>
+                    <p class = "text">Virtual System Controller is a device which is used to Control Some of the  Functionalities of your System using Hand gestures And fingers like Controlling of system volume using your index finger and thumb Sounds Interesting ..</p>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Follow us on: </h2>
+                    <ul class = "social-links">
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Controller :</h2>
+                    <ul>
+                        <li><a href = "#">Virtual Volume</a></li>
+                        <li><a href = "#">Virtual Coursor</a></li>
+                        <li><a href = "#">Virtual Keyboard</a></li>
+                        <!-- <li><a href = "#">Tamil Nadu</a></li>
+                        <li><a href = "#">Gujarat</a></li> -->
+                    </ul>
+                </div>
+
+                <div class = "subscribe-form footer-item">
+                    <h2>Subscribe for Getting Updates !</h2>
+                    <form class = "flex">
+                        <input type = "email" placeholder="Enter Email" class = "form-control">
+                        <input type = "submit" class = "btn" value = "Subscribe">
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src ="{{url_for('static',filename='js/script.js')}}"></script>
+        <script>
+            // play/pause video
+            let video = document.querySelector('.video-wrapper video');
+            document.getElementById('play-btn').addEventListener('click', () => {
+                if(video.paused){
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        </script>
+    </body>
+</html>
